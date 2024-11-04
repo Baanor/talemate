@@ -9,7 +9,10 @@ services:
       - "6800"
       - "5050"
     volumes:
-      - ./:/app/
+      - ./config.yaml:/app/config.yaml
+      - ./scenes:/app/scenes
+      - ./templates:/app/templates
+      - ./chroma:/app/chroma
     environment:
       - PYTHONUNBUFFERED=1
       - PYTHONPATH=/app/src:$PYTHONPATH
